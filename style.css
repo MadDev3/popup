@@ -1,0 +1,60 @@
+body{
+	font-family: 'Roboto Slab', serif;
+}
+
+#contact{
+	height: 50px;
+	width: auto;
+	font-size: 18px;
+	font-family: 'Roboto Slab', serif;
+}
+
+#window{
+	width: 300px;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 37%;
+    background-color: white;
+}
+
+span{
+	float: right;
+	margin-top: -5px;
+}
+
+input{
+	height: 30px;
+	width: 90%;
+	font-size: 1.5em;
+	margin: 5px;
+}
+
+
+textarea{
+	height: 90px;
+	width: 90%;
+	font-size: 1.5em;
+	margin: 5px;
+}
+
+#send{
+	height: 50px;
+	width: 92%;
+	font-size: 1.5em;
+	margin: 5px;
+	margin-top: 100px;
+	background-color: #D35400;
+	border: none;
+	font-family: 'Roboto Slab', serif;
+	color: white;
+}
+
+#send:hover{
+	background-color: #FF2D00;
+}
