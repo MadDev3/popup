@@ -3,6 +3,11 @@ body{
 	margin: 0;
 }
 
+.wrap {
+	width: 600px;
+	margin: auto;
+}
+
 p#m{
 	font-size: 1em;
 }
