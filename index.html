@@ -15,15 +15,15 @@
 <div id="error-msg"></div>
 <div id="window">
 	<span class="close" onclick="Close()">&times;</span>
-	<div>
+	<form method="POST" onsubmit="Send(this, event)">
 		<p id="m"> Заявка</p>
 			<input type="text" id="name" placeholder="Имя">
 			<input type="number" id="phone" placeholder="Телефон" maxlength="11">
 			<input type="text" id="email" placeholder="Email">
 			<textarea id="message" placeholder="Сообщение"></textarea>
-			<button id="send" type="submit" onclick="Send()">Отправить</button>
+			<button id="send" type="submit">Отправить</button>
 		<p id="err"></p>
-	</div>
+	</form>
 </div>
 </body>
 </html>

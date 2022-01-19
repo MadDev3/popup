@@ -15,24 +15,15 @@ function Close(){
 	document.getElementById('overlay').style.display = "none";
 }
 
-function Send(){
+function Send(obForm, event){
+	event.preventDefault()
+
 	if(document.getElementById('name').value && document.getElementById('phone').value.length===11 && 
 	document.getElementById('message').value){
-	name = document.getElementById('name').value;
-	phone = document.getElementById('phone').value;
-	email = document.getElementById('email').value;
-	message = document.getElementById('message').value;
-	let m = {
-		name: name,
-		phone: phone,
-		email: email,
-		message: message
-	}
-	console.log(JSON.stringify(m));
-	
+
 	let xhr = new XMLHttpRequest();
 	xhr.open('POST',"./ajax.json");
-	xhr.send(new FormData(obForm), obForm, "./ajax.json");
+	xhr.send(new FormData(obForm));
 	xhr.onload = function(){
 		if(xhr.status != 200){
 			alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
@@ -45,12 +36,15 @@ function Send(){
 					errorStr += json.error[fieldKey] + '<br>';
 				}
 				document.getElementById('error-msg').innerHTML = errorStr;
-			} else{}
+			} else{
+				alert("Отправлено");
+			}
 		}
-		
+	}
+	xhr.onerror = function () {
+		alert("Произошла ошибка");
 	}
 
-	alert("Отправлено");
 	}
 	else if(!document.getElementById('name').value){
 		document.getElementById('err').innerHTML = "Введите имя";
