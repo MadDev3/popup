@@ -9,17 +9,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
-<body >
+<body>
+<div id="overlay" onclick="Close()"></div>
 <button id="contact" onclick="Show()">Связаться</button>
+<div id="error-msg"></div>
 <div id="window">
 	<span class="close" onclick="Close()">&times;</span>
 	<div>
-		<p> Заявка</p>
-		<input type="text" name="" placeholder="Имя">
-		<input type="text" name="" placeholder="Телефон">
-		<input type="text" name="" placeholder="Email">
-		<textarea placeholder="Сообщение"></textarea>
-		<button id="send">Отправить</button>
+		<p id="m"> Заявка</p>
+			<input type="text" id="name" placeholder="Имя">
+			<input type="number" id="phone" placeholder="Телефон" maxlength="11">
+			<input type="text" id="email" placeholder="Email">
+			<textarea id="message" placeholder="Сообщение"></textarea>
+			<button id="send" type="submit" onclick="Send()">Отправить</button>
+		<p id="err"></p>
 	</div>
 </div>
 </body>
