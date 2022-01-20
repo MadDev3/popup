@@ -5,19 +5,26 @@ var message = undefined;
 
 
 
+
 function Show(){
 	document.getElementById('window').style.display = "block";
 	document.getElementById('overlay').style.display = "block";
+	document.getElementById('back').style.display = "block";
+	document.getElementById('window').style.position = "absolute";
+	document.getElementsByTagName('body')[0].style.overflow = "hidden";
+	document.getElementById('overlay').scrollTo(0,0);
 }
+
 
 function Close(){
 	document.getElementById('window').style.display = "none";
 	document.getElementById('overlay').style.display = "none";
+	document.getElementById('back').style.display = "none";
+	document.body.style.overflow = "scroll";
 }
 
 function Send(obForm, event){
 	event.preventDefault()
-
 	if(document.getElementById('name').value && document.getElementById('phone').value.length===11 && 
 	document.getElementById('message').value){
 

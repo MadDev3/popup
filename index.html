@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="wrap">
+<div id="wrap">
 	<p>
 		Разнообразный и богатый опыт сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.
 	</p>
@@ -24,8 +24,10 @@
 	</p>
 </div>
 
-<div id="overlay" onclick="Close()"></div>
+
 <div id="error-msg"></div>
+<div id="back"></div>
+<div id="overlay" onclick="Close()">
 <div id="window">
 	<span class="close" onclick="Close()">&times;</span>
 	<form method="POST" onsubmit="Send(this, event)">
@@ -40,6 +42,7 @@
 			<button id="send" type="submit">Отправить</button>
 		<p id="err"></p>
 	</form>
+</div>
 </div>
 </body>
 </html>
