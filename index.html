@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<title>pop-up</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="adaptive.css">
     <script type="text/javascript" src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +27,9 @@
 
 
 <div id="error-msg"></div>
-<div id="back"></div>
-<div id="overlay" onclick="Close()">
+
+<div id="overlay">
+	<div id="back" onclick="Close()"></div>
 <div id="window">
 	<span class="close" onclick="Close()">&times;</span>
 	<form method="POST" onsubmit="Send(this, event)">

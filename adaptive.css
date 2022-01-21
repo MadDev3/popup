@@ -1,0 +1,16 @@
+@media only screen and (max-width:1000px){
+    #window{
+        width: 65%;
+        left: 16%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #wrap{
+        width: 90%;
+    }
+    #window{
+        width: 90%;
+        left: 4%;
+    }
+}
